@@ -57,7 +57,7 @@ public OnPluginStart()
 
 }
 
-public APLRes ASkPluginLoad2(Handle myself, bool late, char[] error, int err_max)
+public APLRes AskPluginLoad2(Handle myself, bool late, char[] error, int err_max)
 {
     CreateNative("SetEntityCollisionGroup", Native_SetEntityCollisionGroup);
     return APLRes_Success;
@@ -65,7 +65,7 @@ public APLRes ASkPluginLoad2(Handle myself, bool late, char[] error, int err_max
 
 public int Native_SetEntityCollisionGroup(Handle plugin, int numParams)
 {
-    int client = GetNativeCell(1);
+    int entity = GetNativeCell(1);
     int group = GetNativeCell(2);
-    SDKCall(SetCollisionGroup, client, group);
+    SDKCall(SetCollisionGroup, entity, group);
 }
