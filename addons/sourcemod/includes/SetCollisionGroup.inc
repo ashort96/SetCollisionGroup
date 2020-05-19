@@ -1,2 +1,1 @@
-native int SetClientCollision(int client, int group);
-native int SetAllCollision(int group);
+native int SetEntityCollisionGroup(int entity, int group);
