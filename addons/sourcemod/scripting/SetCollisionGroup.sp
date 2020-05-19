@@ -12,7 +12,6 @@
 #define PLUGIN_VERSION      "1.0.0"
 #define PLUGIN_URL          "https://github.com/ashort96/SetCollisionGroup"
 
-#include <cstrike>
 #include <sdktools>
 #include <SetCollisionGroup>
 #include <sourcemod>
