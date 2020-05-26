@@ -2,6 +2,7 @@
 // Credits:
 //      https://bugs.alliedmods.net/show_bug.cgi?id=6348
 //      https://web.archive.org/web/20190406220848/https://forum.facepunch.com/gmoddev/likl/Crazy-Physics-cause-found/1/
+//      Scags (https://github.com/Scags) for adding TF2 signature
 ///////////////////////////////////////////////////////////////////////////////
 
 #pragma semicolon 1
@@ -9,7 +10,7 @@
 #define PLUGIN_NAME         "CollisionGroup"
 #define PLUGIN_AUTHOR       "destoer & Dunder"
 #define PLUGIN_DESCRIPTION  "Uses the correct way to set collision groups"
-#define PLUGIN_VERSION      "1.0.0"
+#define PLUGIN_VERSION      "1.1.0"
 #define PLUGIN_URL          "https://github.com/ashort96/SetCollisionGroup"
 
 #include <sdktools>
@@ -30,9 +31,9 @@ public Plugin:myinfo =
 public OnPluginStart()
 {
     EngineVersion game = GetEngineVersion();
-    if(game != Engine_CSS)
+    if(game != Engine_CSS && game != Engine_TF2)
     {
-        SetFailState("This plugin has only been tested for CS:S!");
+        SetFailState("This plugin only works for CS:S and TF2!");
     }
 
     Handle gameConf = LoadGameConfigFile("SetCollisionGroup");
