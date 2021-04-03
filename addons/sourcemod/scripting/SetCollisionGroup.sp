@@ -31,9 +31,9 @@ public Plugin:myinfo =
 public OnPluginStart()
 {
     EngineVersion game = GetEngineVersion();
-    if(game != Engine_CSS && game != Engine_TF2)
+    if(game != Engine_CSS && game != Engine_TF2 && game != Engine_CSGO)
     {
-        SetFailState("This plugin only works for CS:S and TF2!");
+        SetFailState("This plugin only works for CS:S/CS:GO and TF2!");
     }
 
     Handle gameConf = LoadGameConfigFile("SetCollisionGroup");
