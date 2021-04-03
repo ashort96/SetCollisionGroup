@@ -24,4 +24,15 @@
       }
     }
   }
+  "csgo"
+  {
+    "Signatures"
+    {
+      "SetCollisionGroup"
+      {
+        "library" "server"
+        "linux" "\x55\x89\xE5\x83\xEC\x18\x89\x5D\xF8\x8B\x5D\x08\x89\x75\xFC\x8B\x75\x0C\x39\xB3\x5C\x01\x00\x00"
+      }
+    }
+  }
 }
